@@ -1,0 +1,96 @@
+/* styles2.css */
+
+/* Container and Centering */
+.min-h-screen {
+    min-height: 100vh;
+  }
+  
+  /* Dashboard container styling */
+  .dashboard-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Title and Welcome Message */
+  .dashboard-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.25rem;
+    color: #718096;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Card Styles for Dashboard Options */
+  .dashboard-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .dashboard-card:hover {
+    background-color: #6b46c1;
+    color: white;
+  }
+  
+  .dashboard-card-icon {
+    font-size: 2.5rem;
+    color: #3182ce;
+    margin-bottom: 1rem;
+  }
+  
+  .dashboard-card-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  
+  /* Button Styling */
+  .logout-button {
+    background-color: #e53e3e;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    background-color: #c53030;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .grid-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  

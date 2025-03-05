@@ -1,0 +1,307 @@
+/* Seat Booking Container */
+.seat-booking-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Main title */
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Sections container */
+.seat-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Left & Right Sections */
+.seat-section {
+  width: 48%;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+.section-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #444;
+  text-align: center;
+}
+
+/* Seat Grid */
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Default Seat Button */
+.seat-button {
+  width: 40px;
+  height: 40px;
+  background-color: #e5e7eb; /* Light gray */
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effect for available seats */
+.seat-button:hover {
+  background-color: #d1d5db; /* Slightly darker gray */
+  transform: scale(1.1);
+}
+
+/* User's Booked Seat */
+.seat-button.user-seat {
+  background-color: #2f855a; /* Green */
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Booked Seat */
+.seat-button.booked {
+  background-color: #e53e3e; /* Red */
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+/* No hover effect for booked seats */
+.seat-button.booked:hover {
+  background-color: #e53e3e;
+  transform: none;
+}
+
+/* Focus state for accessibility */
+.seat-button:focus {
+  outline: 2px solid #3182ce;
+  outline-offset: 2px;
+}
+
+/* Submit Button */
+.submit-button {
+  padding: 12px 24px;
+  background-color: #3182ce;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  border: none;
+  margin-top: 20px;
+}
+
+/* Hover Effect for Submit Button */
+.submit-button:hover {
+  background-color: #2b6cb0;
+  transform: scale(1.05);
+}
+
+/* Disabled Submit Button */
+.submit-button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .seat-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .seat-section {
+    width: 90%;
+  }
+
+  .seat-grid {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  }
+
+  .seat-button {
+    font-size: 14px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+  .seat-grid {
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+  }
+
+  .seat-button {
+    font-size: 12px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #6b21a8); /* Purple Gradient */
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  max-width: 900px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.user-icon {
+  font-size: 22px;
+}
+
+/* Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Auditorium Card */
+.audi-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.audi-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #ffd700; /* Gold */
+}
+
+.audi-name {
+  font-size: 18px;
+}
+
+/* Logout Button */
+.logout-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c53030;
+}
+
+.logout-icon {
+  font-size: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-header {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .grid-container {
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .audi-card {
+    padding: 15px;
+  }
+
+  .logout-button {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,13 @@
+import React from "react";
+import SeatBooking from "./SeatBooking";
+
+const SilverstoneAudi = () => {
+  return (
+    <div className="audi-container">
+      <h1 className="text-3xl font-bold mb-6">Ske Audi - 500 Seats</h1>
+      <SeatBooking />
+    </div>
+  );
+};
+
+export default SkeAudi;

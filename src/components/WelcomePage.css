@@ -1,0 +1,61 @@
+/* Container Styles */
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: url("/public/welcome-bg2") no-repeat center center / cover;
+  background-attachment: fixed; 
+  padding: 1rem;
+}
+
+/* Box for Welcome Message */
+.welcome-box {
+  background-color: #6b46c1;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add slight hover effect */
+.welcome-box:hover {
+  transform: scale(1.02);
+}
+
+/* Welcome Title */
+.welcome-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #222; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Success Message */
+.success-message {
+  color: green;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-box {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 1.5rem;
+  }
+
+  .welcome-title {
+    font-size: 1.6rem;
+  }
+
+  .success-message {
+    font-size: 1rem;
+  }
+}
