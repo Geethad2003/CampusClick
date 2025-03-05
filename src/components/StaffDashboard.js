@@ -6,7 +6,6 @@ import "./styles2.css";
 const StaffDashboard = () => {
   const navigate = useNavigate();
   const [userEmail, setUserEmail] = useState("");
-  console.log('Trial Commit')
   useEffect(() => {
     const storedEmail = localStorage.getItem("userEmail");
     if (storedEmail) {
