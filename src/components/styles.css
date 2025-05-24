@@ -105,8 +105,8 @@ h2 {
 /* Submit Button */
 .submit-button {
   padding: 12px 24px;
-  background-color: #3182ce;
-  color: white;
+  background: #6b21a8;
+  color:white;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
@@ -116,9 +116,15 @@ h2 {
   margin-top: 20px;
 }
 
+.seat-booking-container {
+  background: linear-gradient(135deg, #4f46e5, #6b21a8);
+  color:white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /* Hover Effect for Submit Button */
 .submit-button:hover {
-  background-color: #2b6cb0;
+  background-color: #6b21a8;
   transform: scale(1.05);
 }
 
@@ -181,38 +187,56 @@ h2 {
   justify-content: center;
   height: 100vh;
   background: linear-gradient(135deg, #4f46e5, #6b21a8); /* Purple Gradient */
-  color: white;
-  font-family: 'Poppins', sans-serif;
   padding: 20px;
 }
 
 /* Header */
 .dashboard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  max-width: 900px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
+   background-color: white; /* White background for the header */
+    padding: 20px 30px; /* Generous padding */
+    border-radius: 12px; /* Slightly rounded corners for the header */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 60px); /* Adjust width to fit within container padding */
+    margin-bottom: 20px; /* Space below the header */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 15px; /* Gap for wrapped items */
 }
 
 .dashboard-header h1 {
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 2.8rem; /* Example font size, adjust as needed */
+    font-weight: bold;
+    background: linear-gradient(to right, #4f46e5, #6b21a8);
+    -webkit-background-clip: text; /* Clip the background to the shape of the text */
+    color: transparent; /* Make the text color transparent so the gradient shows through */
+    text-shadow: none; /* Remove any default text shadow that might interfere */
+    flex-grow: 1;
+    text-align: left;
 }
 
 .user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem; /* Adjusted from 16px to maintain consistency with previous outputs */
+    
+    /* Gradient text for user-info */
+    background: linear-gradient(to right, #4f46e5, #6b21a8); /* Your specified purple gradient */
+    -webkit-background-clip: text; /* Clip the background to the shape of the text */
+    color: transparent; /* Make the text color transparent so the gradient shows through */
+    text-shadow: none; /* Ensure no text shadow interferes */
 }
 
 .user-icon {
-  font-size: 22px;
+    font-size: 22px; /* Size for the icon */
+    
+    /* Gradient for the icon (assuming it's a font icon or text-based) */
+    background: linear-gradient(to right, #4f46e5, #6b21a8); /* Apply the same gradient */
+    -webkit-background-clip: text; /* Clip background to text */
+    color: transparent; /* Make text transparent */
+    text-shadow: none; /* Remove any text shadow */
 }
 
 /* Grid Container */
@@ -305,3 +329,4 @@ h2 {
     justify-content: center;
   }
 }
+

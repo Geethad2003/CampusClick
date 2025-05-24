@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginForm.css";
 
@@ -9,38 +9,46 @@ const LoginForm = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = useCallback(async (e) => {
     e.preventDefault();
-
+  
+    // Check for required fields
     if (!role || !email || !password) {
       setError("All fields are required!");
       return;
     }
-
+    e.preventDefault();
+    console.log("Form submitted!");
+  
+    // Log role, email, and password values
+    console.log({ role, email, password });
+  
     try {
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch("http://localhost:3000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ role, email, password }),
       });
-
+  
       const data = await response.json();
-      
+  
+      // Handle invalid response
       if (!response.ok) {
-        throw new Error("Server error. Try again later.");
+        throw new Error(data.message || "Server error. Try again later.");
       }
-
+  
       if (data.success) {
+        console.log("Redirecting to:", `/${role}-dashboard`);
         // Store login details in localStorage
         localStorage.setItem("userEmail", email);
         localStorage.setItem("userRole", role);
         if (data.token) {
-          localStorage.setItem("userToken", data.token); // Save JWT if returned
+          localStorage.setItem("userToken", data.token);
         }
         if (data.user && data.user.name) {
-          localStorage.setItem("userName", data.user.name); // Save user name if available
+          localStorage.setItem("userName", data.user.name);
         }
-
+  
         // Redirect based on role
         navigate(`/${role}-dashboard`);
       } else {
@@ -49,7 +57,7 @@ const LoginForm = () => {
     } catch (error) {
       setError(error.message || "Login failed. Please try again.");
     }
-  };
+  }, [role, email, password, navigate]);
 
   return (
     <form onSubmit={handleSubmit} className="login-form">

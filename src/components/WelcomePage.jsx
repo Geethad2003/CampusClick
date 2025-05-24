@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import LoginForm from "./LoginForm";
-import "./WelcomePage.css";
+import LoginForm from "./LoginForm"; // Assuming LoginForm is a separate component
+import "./WelcomePage.css"; // Your CSS file for this page
 
 const WelcomePage = () => {
   const navigate = useNavigate();
@@ -21,6 +21,20 @@ const WelcomePage = () => {
       <div className="welcome-box">
         <h1 className="welcome-title">Welcome to CampusClick</h1>
         <LoginForm />
+
+        {/* Contact Details Box */}
+        <div className="contact-box">
+          <h3 className="contact-title">Need Help? Contact Us</h3>
+          <p className="contact-info">
+            Email: <a href="mailto:support@campusclick.com">support@campusclick.com</a>
+          </p>
+          <p className="contact-info">
+            Phone: <a href="tel:+911234567890">+91 12345 67890</a>
+          </p>
+          <p className="contact-info">
+            Address: Kristu Jayanti College, Bengaluru, India
+          </p>
+        </div>
       </div>
     </div>
   );

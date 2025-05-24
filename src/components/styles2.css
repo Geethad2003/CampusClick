@@ -7,7 +7,7 @@
   
   /* Dashboard container styling */
   .dashboard-container {
-    max-width: 1200px;
+    max-width: 100;
     width: 100%;
     padding: 2rem;
     background-color: white;
@@ -19,16 +19,22 @@
   .dashboard-title {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #2d3748;
+    /* Gradient text color */
+    background: linear-gradient(to right,white,rgb(58, 176, 223)); 
+    -webkit-background-clip: text;
+    color: transparent;
     text-align: center;
     margin-bottom: 1.5rem;
+    font-family: Tahoma;
   }
-  
   .dashboard-subtitle {
     font-size: 1.25rem;
-    color: #718096;
+    background: linear-gradient(to right,white,rgb(58, 176, 223)); 
+    -webkit-background-clip: text;
+    color: transparent;
     text-align: center;
     margin-bottom: 2rem;
+    font-family: Tahoma;
   }
   
   /* Card Styles for Dashboard Options */
@@ -45,7 +51,7 @@
   }
   
   .dashboard-card:hover {
-    background-color: #6b46c1;
+    background-color: #6b21a8;
     color: white;
   }
   
@@ -58,11 +64,16 @@
   .dashboard-card-text {
     font-size: 1.125rem;
     font-weight: 600;
+    font-family: Tahoma;
+    background: linear-gradient(135deg, #4f46e5, #6b21a8);
+    -webkit-background-clip: text;
+    color: transparent;
+
   }
   
   /* Button Styling */
   .logout-button {
-    background-color: #e53e3e;
+    background-color:rgb(235, 53, 83);
     color: white;
     padding: 1rem 2rem;
     border-radius: 0.75rem;
@@ -70,10 +81,12 @@
     font-weight: 600;
     margin-top: 2rem;
     transition: all 0.3s ease;
+    font-family: Tahoma;
   }
   
+  
   .logout-button:hover {
-    background-color: #c53030;
+    background-color:#6b21a8;
   }
   
   .grid-container {
@@ -82,6 +95,39 @@
     gap: 1.5rem;
   }
   
+  .slightly-round-button {
+    border-radius: 10px; /* Adjust for desired level of roundness */
+    padding: 10px 20px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  #mySpecificButton {
+    background-color: white; /* White background */
+    color: #007bff; /* Blue text */
+    border-radius: 10px; /* Slightly rounded edges */
+    padding: 10px 20px; /* Add some padding for better visual appearance */
+    border: 1px solid #007bff; /* Add a blue border to match text */
+    cursor: pointer; /* Indicate it's clickable */
+    font-size: 16px; /* Adjust font size as needed */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    background: linear-gradient(135deg, #4f46e5, #6b21a8);
+    -webkit-background-clip: text;
+    color: white ;
+    font-family: Tahoma;
+  }
+
+  #mySpecific{
+    background: linear-gradient(to right,white,rgb(58, 176, 223)); 
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 20px;
+    font-family: Tahoma;
+  }
+
   @media (min-width: 640px) {
     .grid-container {
       grid-template-columns: repeat(3, 1fr);

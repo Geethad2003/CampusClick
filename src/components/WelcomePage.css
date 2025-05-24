@@ -1,61 +1,192 @@
+/* WelcomePage.css - Complete Refined Code */
+
 /* Container Styles */
 .welcome-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
-  background: url("/public/welcome-bg2") no-repeat center center / cover;
-  background-attachment: fixed; 
-  padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    /* Using a background image as specified */
+    background: url("/public/welcome-bg3.jpeg") no-repeat center center / cover;
+    background-attachment: fixed; 
+    padding: 1rem;
+    font-family: 'Tahoma', sans-serif; /* Ensure font consistency */
 }
 
-/* Box for Welcome Message */
+/* Box for Welcome Message - Now with Gradient Background */
 .welcome-box {
-  background-color: #6b46c1;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  width: 400px;
-  text-align: center;
-  transition: transform 0.3s ease-in-out;
+    /* Gradient background for the box */
+    background: linear-gradient(135deg, rgba(171, 98, 244, 0.15), rgba(48, 56, 219, 0.05));
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    padding: 2.5rem; /* Increased padding */
+    border-radius: 18px; /* More rounded corners */
+    box-shadow: 0 10px 30px rgba(130, 99, 231, 0.3); /* Stronger shadow */
+    width: 500px; 
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid rgba(167, 153, 232, 0.2);
 }
 
 /* Add slight hover effect */
 .welcome-box:hover {
-  transform: scale(1.02);
+    transform: scale(1.07); 
 }
 
-/* Welcome Title */
+/* Welcome Title - Gradient Text */
 .welcome-title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #222; 
-  text-transform: uppercase;
-  letter-spacing: 1px;
+    font-size: 2.9em; 
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    
+    /* Apply Gradient Text */
+    background: linear-gradient(to right, #4f46e5, #6b21a8); /* Your specified purple gradient */
+    -webkit-background-clip: text; /* Clip the background to the shape of the text */
+    color: transparent; /* Make the text color transparent so the gradient shows through */
+    text-shadow: blue;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Increased letter spacing */
 }
 
 /* Success Message */
 .success-message {
-  color: green;
-  font-size: 1.1rem;
-  font-weight: bold;
-  margin-top: 1rem;
+    color: greenyellow; /* Light green for success on dark background */
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Login Form Styling (from previous response, already refined) */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.login-form label {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    margin-bottom: -5px;
+}
+
+.login-form select,
+.login-form input {
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-form select::placeholder,
+.login-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.login-form select:focus,
+.login-form input:focus {
+    outline: none;
+    border: none;
+    box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Login Form Button - Gradient & Rounded (from previous response, already refined) */
+.login-form button {
+    background: linear-gradient(135deg, #4f46e5, #6b21a8);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 15px;
+}
+
+.login-form button:hover {
+    background: linear-gradient(135deg, #6366f1, #861cbc);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Box Styling */
+.contact-box {
+    margin-top: 40px;
+    padding: 25px;
+    /* Ensure a background color is set for content visibility */
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white background */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: white; /* Default text color for contact info */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* Contact Title - Gradient Text */
+.contact-title {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    
+    /* Apply Gradient Text */
+    background: linear-gradient(to right, #1d87e4, #8a53eb);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: none; /* Remove any text shadow */
+}
+
+.contact-info {
+    font-size: 1em;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #5c18d1; /* Ensure contact info text is white */
+}
+
+.contact-info a {
+    color: #5c18d1; /* Lighter purple for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #0487fa; 
+    text-decoration: underline;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .welcome-box {
-    width: 90%; /* Adjust width for smaller screens */
-    padding: 1.5rem;
-  }
+    .welcome-box {
+        width: 90%;
+        padding: 1.5rem;
+    }
 
-  .welcome-title {
-    font-size: 1.6rem;
-  }
+    .welcome-title {
+        font-size: 2.5rem;
+    }
 
-  .success-message {
-    font-size: 1rem;
-  }
+    .success-message {
+        font-size: 1rem;
+    }
+
+    .contact-box {
+        margin-top: 30px;
+        padding: 20px;
+    }
 }
+

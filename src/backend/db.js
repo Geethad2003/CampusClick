@@ -3,11 +3,11 @@ const mysql = require("mysql2");
 // Create the MySQL connection pool
 const db = mysql.createPool({
   host: "localhost",
-  user: "root",            
-  password: "geetha2446",  
-  database: "campusclick", 
+  user: "root",
+  password: "geetha2446",
+  database: "cc",
   waitForConnections: true,
-  connectionLimit: 10,   
+  connectionLimit: 10,
   queueLimit: 0,
 });
 
@@ -15,10 +15,10 @@ const db = mysql.createPool({
 db.getConnection((err, connection) => {
   if (err) {
     console.error("Database connection failed:", err);
-    process.exit(1); 
+    process.exit(1);
   } else {
     console.log("Database connected!");
-    connection.release();  
+    connection.release();
   }
 });
 

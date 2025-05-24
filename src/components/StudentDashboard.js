@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { FiMic, FiLogOut, FiUser } from "react-icons/fi"; // Added new icons
+import { FiMic, FiLogOut, FiUser } from "react-icons/fi";
+import "./styles.css"; 
 
 const StudentDashboard = () => {
   const navigate = useNavigate();
@@ -17,16 +18,15 @@ const StudentDashboard = () => {
   }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.removeItem("userEmail");
-    localStorage.removeItem("userRole");
-    navigate("/"); // Redirect to Welcome Page
+    localStorage.clear(); // Clear local storage on logout
+    navigate("/"); // Redirect to Login Page
   };
 
   const audiOptions = [
-    { name: "Silverstone Audi", icon: <FiMic />, path: "/book-seat/Silverstone Audi" },
-    { name: "SKE Audi", icon: <FiMic />, path: "/book-seat/SKE Audi" },
-    { name: "Main Audi", icon: <FiMic />, path: "/book-seat/Main Audi" },
-    { name: "Mini Audi", icon: <FiMic />, path: "/book-seat/Mini Audi" },
+    { name: "Silverstone Audi", icon: <FiMic />, path: "/auditorium-events/Silverstone" },
+    { name: "SKE Audi", icon: <FiMic />, path: "/auditorium-events/SKE" },
+    { name: "Main Audi", icon: <FiMic />, path: "/auditorium-events/Main" },
+    { name: "Mini Audi", icon: <FiMic />, path: "/auditorium-events/Mini" },
   ];
 
   return (

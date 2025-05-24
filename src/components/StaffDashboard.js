@@ -24,9 +24,12 @@ const StaffDashboard = () => {
 
   // Logout function
   const handleLogout = () => {
-    localStorage.removeItem("userEmail");
-    localStorage.removeItem("userRole");
-    navigate("/"); // Redirect back to Welcome Page
+    localStorage.clear(); // Clear local storage on logout
+    navigate("/"); // Redirect to Login Page
+  };
+
+  const handleViewAllEvents = () => {
+    navigate("/allevents"); // Navigate to the events page
   };
 
   return (
@@ -34,12 +37,13 @@ const StaffDashboard = () => {
       <div className="dashboard-container">
         {/* Profile Card */}
         <div className="profile-card">
-          <FiUser className="profile-icon" />
-          <span className="profile-email">{userEmail}</span>
+          <FiUser id="mySpecific" className="profile-icon" />
+          <span id="mySpecific" className="profile-email">{userEmail}</span>
         </div>
         
-        <h1 className="dashboard-title">Staff Dashboard</h1>
-        <p className="dashboard-subtitle">Welcome, manage the following auditoriums</p>
+        <h1 className="dashboard-title">STAFF DASHBOARD</h1>
+        <p className="dashboard-subtitle">Welcome to CampusClick,You can now manage the following auditoriums</p>
+        <button id="mySpecificButton" onClick={handleViewAllEvents}>View All Events</button>
 
         <div className="grid-container">
           {options.map((option, index) => (
